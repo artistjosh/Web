@@ -1,5 +1,6 @@
 
 import './styles.css';
+import { multiply } from './math';
 
 const number1l = document.getElementById('number1') as HTMLInputElement;
 const number2 = document.getElementById('number2') as HTMLInputElement;
