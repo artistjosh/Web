@@ -7,7 +7,7 @@ describe('Variables in TypeScript', () => {
 
         x = 3.14;
 
-        x = function(a, b) {
+        x = function (a, b) {
             return a + b;
         };
 
@@ -148,7 +148,7 @@ describe('type', () => {
                 type SeatType = 'window' | 'aisle' | 'middle';
 
                 let seatType: SeatType;
-                seatType = (function() {
+                seatType = (function () {
                     return 'window' as SeatType;
                 })();
                 let price = 100;
@@ -223,12 +223,12 @@ describe('type', () => {
     });
     describe('type assertions', () => {
         it('they are like type casts but they don\'t do anything butt tell the compiler to calm down.', () => {
-            x = (function() {
+            const x = (function () {
                 return 'tiger';
             })();
 
             // tslint:disable-next-line: no-angle-bracket-type-assertion
-            const length: number = (<string> x).length;
+            const length: number = (<string>x).length;
 
             const length2: number = (x as string).length;
 
